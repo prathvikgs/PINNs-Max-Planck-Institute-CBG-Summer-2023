@@ -32,8 +32,6 @@ def kernel(z,eps):
 
 # In[4]:
 
-
-
 def subtract_kernel_product(xi, xj ,l,r,eps):
     def k(x):
         return kernel(abs(x - xi),eps) * kernel(abs(x - xj),eps)
@@ -150,12 +148,6 @@ def integrate_kernel_product(xi, xj ,l,r):
     return result
 
 
-# In[10]:
-
-
-print(integrate_kernel_product(0,0,-1,1))
-
-
 # In[11]:
 
 
@@ -208,6 +200,3 @@ def ikp(xi,xj,eps):
         return part4_np(d_val,eps)-subtract_are
     elif(d_val<0.5*eps and d_val>=0):
         return part5_np(d_val,eps)-subtract_are
-
-ikp(0,0,eps)
-
